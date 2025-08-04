@@ -19,7 +19,7 @@ cd api-sistema-biblioteca
 
 cp .example.env .env 
 
-# no arquivo .env adicione o seu token da API do TMDB em TMDB_API_TOKEN=
+# configure o TMDB no .env passando seu token adquirido para TMDB_API_TOKEN=
 
 # configure o DB no .env
 

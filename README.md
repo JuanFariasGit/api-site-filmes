@@ -12,7 +12,7 @@ Copie a chave gerada e cole no seu .env como TMDB_API_TOKEN
 
 ## Como rodar o projeto localmente com Docker
 
-### A API ficará disponível em http://localhost:8080
+A API ficará disponível em http://localhost:8080
 
 ```
 git clone https://github.com/JuanFariasGit/api-sistema-biblioteca.git

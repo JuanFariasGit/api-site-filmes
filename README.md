@@ -6,9 +6,7 @@ Acesse https://www.themoviedb.org
 
 Crie uma conta ou faça login
 
-Solicite uma chave de API em https://www.themoviedb.org/settings/api 
-
-Copie o seu token gerado e cole no seu .env como TMDB_API_TOKEN
+Solicite uma chave de API em https://www.themoviedb.org/settings/api
 
 ## Como rodar o projeto localmente com Docker
 

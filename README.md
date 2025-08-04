@@ -12,6 +12,8 @@ Copie a chave gerada e cole no seu .env como TMDB_API_TOKEN
 
 ## Como rodar o projeto localmente com Docker
 
+### A API ficará disponível em http://localhost:8080
+
 ```
 git clone https://github.com/JuanFariasGit/api-sistema-biblioteca.git
 
@@ -38,8 +40,6 @@ docker compose exec mariadb mysql -u root -p"root" -e "CREATE DATABASE IF NOT EX
 
 docker compose exec app php artisan migrate
 ```
-
-### API disponível em http://localhost:8080
 
 ## Indicação de onde está implementado o CRUD
 

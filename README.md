@@ -21,6 +21,15 @@ cp .example.env .env
 
 # no arquivo .env adicione o seu token da API do TMDB em TMDB_API_TOKEN=
 
+# configure o DB no .env
+
+# DB_CONNECTION=mysql
+# DB_HOST=mariadb
+# DB_PORT=3306
+# DB_DATABASE=api_filmes
+# DB_USERNAME=root
+# DB_PASSWORD=root
+
 docker compose up -d
 
 docker compose exec app php artisan key:generate

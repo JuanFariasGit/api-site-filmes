@@ -9,9 +9,11 @@ class TmdbController extends Controller
 {
     public function getMovies(Request $request)
     {
-        $search = $request->query('search');
-        $page   = $request->query('page') ?? 1;
-        $path   = $search ? '/search/movie?query=' . $search . '&language=pt-br&page=' . $page :
+        $search = $request->search;
+
+        $page = $request->page ?? 1;
+
+        $path = $search ? '/search/movie?query=' . $search . '&language=pt-br&page=' . $page :
             '/movie/popular?language=pt-br&page=' . $page;
 
         $response = Http::withToken(config('tmdb.api_token'))

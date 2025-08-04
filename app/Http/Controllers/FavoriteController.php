@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreFavoriteRequest;
+use App\Http\Resources\FavoriteResource;
 use App\Models\Favorite;
 use Illuminate\Http\Request;
 
@@ -10,7 +11,7 @@ class FavoriteController extends Controller
 {
     public function index(Request $request)
     {
-        if ($request->get('genre_ids')) {
+        if ($request->genre_ids) {
             $genreIds = array_map('intval', explode(',', $request->get('genre_ids')));
 
             return Favorite::whereJsonContains('genre_ids', $genreIds)->orderBy('id', 'desc')->paginate(20);
@@ -18,21 +19,22 @@ class FavoriteController extends Controller
 
         return Favorite::orderBy('id', 'desc')->paginate(20);
     }
+
     public function store(StoreFavoriteRequest $request)
     {
         $data = $request->validated();
 
-        Favorite::create($data);
+        $favorite = Favorite::create($data);
 
-        return response()->json(['success' => 'true']);
+        return new FavoriteResource($favorite);
     }
 
     public function destroy($id)
     {
         $favorite = Favorite::findOrFail($id);
 
-        if ($favorite) {
-            $favorite->delete();
-        }
+        $favorite->delete();
+
+        return response(null, 204);
     }
 }

@@ -50,3 +50,19 @@ Model: app/Models/Favorite.php
 Migration: database/migrations/2025_08_03_133618_create_favorites_table.php
 
 Testes: tests/Feature/FavoriteControllerTest.php
+
+## Instruções sobre como testar a aplicação
+
+Testar a API utilizando o PHPUnit
+
+```
+cd api-sistema-biblioteca
+
+docker compose exec app touch database/database.sqlite
+
+docker compose exec app vendor/bin/phpunit --filter=FavoriteControllerTest
+```
+
+Testar o front de forma manual
+
+[Assistir Vídeo no Google Drive](https://drive.google.com/file/d/1LKJ5N_qdQ_VzM4dKolYvtW4KSdJQDk2D/view)

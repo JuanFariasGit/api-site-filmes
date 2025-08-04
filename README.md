@@ -2,11 +2,11 @@
 
 ## Link para obter a chave da API do TMDB
 
-Acesse https://www.themoviedb.org/settings/api
+Acesse https://www.themoviedb.org
 
 Crie uma conta ou faça login
 
-Solicite uma chave de API (tipo "Developer")
+Solicite uma chave de API em https://www.themoviedb.org/settings/api 
 
 Copie a chave gerada e cole no seu .env como TMDB_API_TOKEN
 

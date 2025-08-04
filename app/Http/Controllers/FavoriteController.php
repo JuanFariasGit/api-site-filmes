@@ -12,7 +12,7 @@ class FavoriteController extends Controller
     public function index(Request $request)
     {
         if ($request->genre_ids) {
-            $genreIds = array_map('intval', explode(',', $request->get('genre_ids')));
+            $genreIds = array_map('intval', explode(',', $request->genre_ids));
 
             return Favorite::whereJsonContains('genre_ids', $genreIds)->orderBy('id', 'desc')->paginate(20);
         }

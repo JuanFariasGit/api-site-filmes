@@ -38,6 +38,6 @@ Controller: app/Http/Controllers/FavoriteController.php, app/Http/Controllers/Tm
 
 Model: app/Models/Favorite.php
 
-Migration: database/migrations/2023_01_01_create_favorites_table.php
+Migration: database/migrations/2025_08_03_133618_create_favorites_table.php
 
-Testes: tests/Feature/FavoriteTest.php
+Testes: tests/Feature/FavoriteControllerTest.php
